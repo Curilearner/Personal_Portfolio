@@ -1,0 +1,19 @@
+@import "tailwindcss";
+:root {
+    background-color: rgb(20, 20, 20);
+    color: aliceblue;
+    font-family: 'Roboto Mono' , 'monospace';
+}
+.light-mode {
+  background-color: aliceblue;
+  color: rgb(9, 9, 11);
+  
+}
+.ctrl-k{
+    background-color:rgb(48,48,50) ;
+    color: #9F9FA9;
+    
+}
+.search-button{
+    color: #9F9FA9;
+}
