@@ -13,7 +13,7 @@ const Banner = () => {
               ? "/Images/Portfolio-Blackbg-banner.svg"
               : "/Images/Portfolio-Whitebg-banner.svg"
           }
-          alt="SK-Banner-Dark"
+          alt="SK-Banner-Dark-Banner"
         />
       </div>
     </>
