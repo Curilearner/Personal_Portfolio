@@ -1,21 +1,67 @@
 import React, { useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
+import { TbCircleLetterKFilled } from "react-icons/tb";
+import { TbCircleLetterSFilled } from "react-icons/tb";
 import ThemeToggleButton from "../NavbarElements/ThemeToggleButton";
 import Github_Link from "../NavbarElements/Github_Link";
+import ThemeContext from "../../..//ThemeContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { darkTheme } = useContext(ThemeContext);
   return (
     <>
       <div className="w-full h-12 mt-2 ml-2 flex items-center border-y-2  border-gray-500">
-        <div className="w-4/6 h-11  m-auto flex justify-end items-center space-x-3 border-x-2 border-gray-500 ">
-          <a className="cursor-pointer no-underline">Portfolio</a>
-          <a className="cursor-pointer no-underline">About me</a>
-          <a className="cursor-pointer no-underline">Social</a>
-          <div className="flex w-24 h-8 justify-around items-center  border-2 rounded-3xl cursor-pointer border-gray-500  ">
-            <IoSearchSharp className="search-button w-5 h-5" />
-            <div className="border-2 h-6 rounded ctrl-k text-xs w-13 flex justify-center items-center">Ctrl K</div>
+        <div className="w-4/6 h-11  m-auto flex justify-between items-center space-x-3 border-x-2 border-gray-500 ">
+          <div className="w-16 h-16 ml-20 flex justify-center items-center text-4xl font-bold cursor-pointer">
+            <TbCircleLetterSFilled
+              className={`${darkTheme ? "text-gray-200" : "text-gray-900"}`}
+            />
+            <TbCircleLetterKFilled
+              className={`${darkTheme ? "text-gray-200" : "text-gray-900"}`}
+            />
           </div>
-          <Github_Link />
+          <div className="p-0 m-0 flex gap-2 items-center w-3/6">
+            <a
+              className={`cursor-pointer no-underline ${
+                darkTheme ? "text-gray-300" : "text-gray-900"
+              }`}
+            >
+              Portfolio
+            </a>
+            <a
+              className={`cursor-pointer no-underline ${
+                darkTheme ? "text-gray-300" : "text-gray-900"
+              }`}
+            >
+              About me
+            </a>
+            <a
+              className={`cursor-pointer no-underline ${
+                darkTheme ? "text-gray-300" : "text-gray-900"
+              }`}
+            >
+              Social
+            </a>
+            <div
+              className={`flex w-24 h-8 justify-around items-center  border-2 rounded-3xl cursor-pointer border-gray-500  `}
+            >
+              <IoSearchSharp
+                className={` w-5 h-5 ${
+                  darkTheme ? "search-button-dark" : "search-button-light"
+                }`}
+              />
+              <div
+                className={`border-2 h-6 rounded ${
+                  darkTheme ? "ctrl-k-dark" : "ctrl-k-light bg-gray-300"
+                } text-xs w-13 flex justify-center items-center`}
+              >
+                Ctrl K
+              </div>
+            </div>
+            <Github_Link />
+            <ThemeToggleButton />
+          </div>
         </div>
       </div>
     </>

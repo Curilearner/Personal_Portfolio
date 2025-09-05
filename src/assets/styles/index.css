@@ -9,11 +9,18 @@
   color: rgb(9, 9, 11);
   
 }
-.ctrl-k{
+.ctrl-k-dark{
     background-color:rgb(48,48,50) ;
     color: #9F9FA9;
     
 }
-.search-button{
+.ctrl-k-light{
+    background-color: rgb(235, 235, 235);
+    color: rgb(48, 48, 50);
+}
+.search-button-dark{
     color: #9F9FA9;
+}
+.search-button-light{
+    color: rgb(31, 26, 26)
 }
