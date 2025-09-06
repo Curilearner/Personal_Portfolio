@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <ThemeContext.Provider value={{ darkTheme, toggleTheme }}>
-        <div className={darkTheme ? "bg-gray-900 min-h-screen" : "bg-gray-300 min-h-screen"}>
+        <div className={darkTheme ? "bg-black min-h-screen" : "bg-white min-h-screen"}>
           <Navbar />
           <Banner />
         </div>

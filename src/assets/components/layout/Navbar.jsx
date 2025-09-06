@@ -12,16 +12,7 @@ const Navbar = () => {
   return (
     <>
       <div className="w-full h-12 mt-2 ml-2 flex items-center border-y-2  border-gray-500">
-        <div className="w-4/6 h-11  m-auto flex justify-between items-center space-x-3 border-x-2 border-gray-500 ">
-          <div className="w-16 h-16 ml-20 flex justify-center items-center text-4xl font-bold cursor-pointer">
-            <TbCircleLetterSFilled
-              className={`${darkTheme ? "text-gray-200" : "text-gray-900"}`}
-            />
-            <TbCircleLetterKFilled
-              className={`${darkTheme ? "text-gray-200" : "text-gray-900"}`}
-            />
-          </div>
-          <div className="p-0 m-0 flex gap-2 items-center w-3/6">
+        <div className="w-2/4 h-11  m-auto flex justify-end items-center space-x-3 border-x-2 border-gray-500 ">
             <a
               className={`cursor-pointer no-underline ${
                 darkTheme ? "text-gray-300" : "text-gray-900"
@@ -61,7 +52,7 @@ const Navbar = () => {
             </div>
             <Github_Link />
             <ThemeToggleButton />
-          </div>
+          
         </div>
       </div>
     </>
